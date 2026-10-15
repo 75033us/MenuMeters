@@ -1,0 +1,18 @@
+name: CI
+
+# Placeholder CI so team branch policy has a pipeline to point at.
+# TODO: replace with a real build, e.g.
+#   xcodebuild -project MenuMeters.xcodeproj -scheme "MenuMeters No Sparkle" \
+#     -configuration Release build CODE_SIGN_IDENTITY='-' DEVELOPMENT_TEAM=''
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  dummy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "dummy CI passed"
